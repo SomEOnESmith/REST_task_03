@@ -22,7 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('flights/', views.FlightsList.as_view(), name="flights-list"),
 
-    path('login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/', TokenObtainPairView.as_view(), name='login'),
 
     path('bookings/', views.BookingsList.as_view(), name="bookings-list"), 
     path('booking/<int:booking_id>/', views.BookingDetails.as_view(), name="booking-details"),
